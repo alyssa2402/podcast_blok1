@@ -1,0 +1,363 @@
+/*algemeen*/
+/* bronnen toevoegen */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F4F2EC;
+    color: #2D2B29;
+    font-family: Arial, sans-serif;
+}
+ 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+
+header {
+    padding: 1.5em 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #D81B60;
+}
+
+/* tekst naar andere html pagina */
+
+.index-link a {
+    color: #D81B60;
+    text-decoration: none;
+}
+
+/* Navigatie */
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+
+.logo {
+    max-width: 8vw; 
+    max-height: 5em; 
+    height: auto; 
+}
+
+
+
+.navlijst {
+    display: flex;
+    gap: 2em;
+    list-style: none; 
+}
+
+
+.navlijst a {
+    text-decoration: none; 
+    background-color: #D81B60; 
+    color: #F4F2EC; 
+    padding: 0.8em 1.5em; 
+    border-radius: 0.5em; 
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.navlijst a:hover {
+    background-color: #bc1754; 
+    color: #e2e0d9;
+}
+
+
+.navlijst .actief a {
+    background-color: #f570a1; 
+    color: #ffffff; 
+}
+
+
+
+
+/* Intro sectie */
+
+.intro {
+    display: flex;
+    padding: 2em;
+    margin-top: 3em;
+}
+
+.intro article {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 2em;
+}
+
+.groepsfoto {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.groepsfoto img {
+    max-width: 100%;
+    height: auto;
+    max-height: 20em;
+}
+
+
+
+
+/* Polaroid sectie */
+.polaroid-sectie {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 3em;
+    padding: 5em 10vw;
+}
+
+.polaroid-sectie div{
+    text-align: center;
+    flex: 1;
+    padding-top: 2em;
+}
+
+.polaroid-sectie img {
+    width: 70%;
+    height: auto;
+    margin-top: 5em;
+}
+
+.polaroid-sectie p {
+    margin-top: 1.5em;
+    font-size: 1.0em;
+    max-width: 100%;
+}
+
+
+
+/* Video sectie */
+.video-sectie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap: 1em;
+    margin-top: auto;
+}
+
+.video-sectie video {
+    max-width: 90vw;
+    height: auto;
+    max-height: 50vh;
+}
+
+.video-sectie p {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+
+
+
+/* Over ons pagina */
+
+
+.overons-sectie {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.overons-links, .overons-rechts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.overons-links {
+    flex-direction: row-reverse;
+}
+
+.overons-rechts {
+    flex-direction: row;
+}
+
+.overons-sectie img {
+    max-width: 25%;
+    height: auto;
+    object-fit: cover;
+    margin: 1.5em;
+}
+
+.overons-sectie p {
+    font-size: 1.2em;
+    flex: 1;
+    line-height: 1.5em;
+    max-width: 65%;
+}
+
+
+
+/* afleveringen pagina*/
+
+.afleveringen-sectie {
+    display: flex;
+    flex-direction: column;
+    gap: 2em; 
+    width: 80vw; 
+    margin: 0 auto; 
+}
+
+
+.aflevering-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.aflevering-item img {
+    max-width: 25%; 
+    height: auto; 
+    flex: 1; 
+}
+
+
+
+/*audio */
+.aflevering-item audio {
+    width: 100%; 
+    flex: 1; 
+}
+
+
+
+
+/* footer*/
+footer {
+    background-color: #D81B60; 
+    color: #F4F2EC; 
+    text-align: center; 
+    padding: 1em 0; 
+}
+
+
+.footer-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+
+.social-media a {
+    color: #F4F2EC; 
+    text-decoration: none; 
+    margin: 0 0.5em; 
+}
+
+.social-media a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+
+
+/* responisive*/
+
+/* home pagina*/
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro article{
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .groepsfoto img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .polaroid-sectie {
+        flex-direction: column;
+        gap: 2em;
+        padding: 2em 5vw;
+    }
+
+    .polaroid-sectie img {
+        max-width: 90%;
+    }
+
+
+/* over ons pagina*/
+
+    .overons-links, .overons-rechts {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .overons-sectie img {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .overons-sectie p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .intro {
+        padding: 1em;
+    }
+
+    .polaroid-frame p {
+        font-size: 0.8em;
+    }
+
+    .overons-sectie img {
+        max-width: 90%;
+    }
+
+    .overons-sectie p {
+        font-size: 1em;
+    }
+}
+
+
+/*footer*/
+@media (max-width: 768px) {
+    footer {
+        padding: 1em; /
+    }
+
+    .social-media {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .social-media a {
+        margin: 0.5em 0; 
+    }
+}
